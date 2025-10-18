@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-gray-900 antialiased;
+  font-family: var(--font-inter);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dominion-blue rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dominion-lightblue;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-dominion-blue via-blue-600 to-dominion-lightblue;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-gold;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-dominion text-white rounded-lg font-semibold 
+           shadow-lg hover:shadow-xl transform hover:-translate-y-1 
+           transition-all duration-300 flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-dominion-blue border-2 border-dominion-blue 
+           rounded-lg font-semibold hover:bg-dominion-blue hover:text-white 
+           transition-all duration-300 flex items-center gap-2;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Hero Background Pattern */
+.hero-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(30, 74, 159, 0.1) 0%, transparent 50%);
+}
+
+/* Stat Cards Gradient Border */
+.gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(135deg, #0A1F5E, #FFB800, #1E4A9F);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Timeline Styling */
+.timeline-item {
+  @apply relative pl-8 pb-8;
+}
+
+.timeline-item::before {
+  content: '';
+  @apply absolute left-0 top-0 w-0.5 h-full bg-gradient-to-b from-dominion-blue to-dominion-lightblue;
+}
+
+.timeline-item::after {
+  content: '';
+  @apply absolute left-0 top-2 w-4 h-4 bg-dominion-gold rounded-full border-4 border-white shadow-lg;
+  transform: translateX(-7.5px);
+}
+
+/* Phase Cards */
+.phase-card {
+  @apply bg-white rounded-2xl shadow-lg p-6 border-l-4 hover:shadow-2xl transition-all duration-300;
+}
+
+.phase-card-1 {
+  @apply border-green-500;
+}
+
+.phase-card-2 {
+  @apply border-blue-500;
+}
+
+.phase-card-3 {
+  @apply border-yellow-500;
+}
+
+.phase-card-4 {
+  @apply border-orange-500;
+}
+
+.phase-card-5 {
+  @apply border-purple-500;
+}
+
+/* District Tags */
+.district-tag {
+  @apply inline-block px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mr-2 mb-2;
+}
+
+/* Checklist Items */
+.checklist-item {
+  @apply flex items-start gap-3 p-4 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer;
+}
+
+.checklist-checkbox {
+  @apply w-5 h-5 rounded border-2 border-dominion-blue cursor-pointer flex-shrink-0 mt-0.5;
+}
+
+/* Download Card */
+.download-card {
+  @apply bg-gradient-to-br from-white to-blue-50 rounded-xl p-6 shadow-lg 
+         border border-blue-100 hover:shadow-2xl hover:scale-105 
+         transition-all duration-300 cursor-pointer;
+}
+
+/* Stats Counter */
+.stat-number {
+  @apply text-5xl font-bold text-gradient mb-2;
+}
+
+.stat-label {
+  @apply text-gray-600 font-medium;
+}
+
+/* Prayer Card */
+.prayer-card {
+  @apply bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 shadow-md 
+         border-l-4 border-dominion-gold hover:shadow-lg transition-all;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  @apply fixed inset-0 bg-dominion-blue bg-opacity-95 z-50 
+         flex flex-col items-center justify-center p-8 
+         transform transition-transform duration-300;
+}
+
+/* Section Divider */
+.section-divider {
+  @apply w-24 h-1 bg-gradient-dominion mx-auto mb-8 rounded-full;
+}
+
+/* Tooltip */
+.tooltip {
+  @apply absolute invisible group-hover:visible bg-gray-900 text-white 
+         px-3 py-2 rounded-lg text-sm whitespace-nowrap z-10;
+}
+
+/* Progress Bar */
+.progress-bar {
+  @apply w-full bg-gray-200 rounded-full h-3 overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-gradient-dominion rounded-full transition-all duration-500;
+}
+
+/* Accordion */
+.accordion-item {
+  @apply border-b border-gray-200 last:border-b-0;
+}
+
+.accordion-header {
+  @apply w-full flex items-center justify-between p-4 text-left 
+         font-semibold text-gray-900 hover:bg-blue-50 transition-colors;
+}
+
+.accordion-content {
+  @apply px-4 pb-4 text-gray-700 leading-relaxed;
+}
+
+/* Badge */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-priority-high {
+  @apply bg-red-100 text-red-800;
+}
+
+.badge-priority-medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-priority-low {
+  @apply bg-green-100 text-green-800;
+}
+
+/* Glowing Effect */
+.glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px rgba(255, 184, 0, 0.6);
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
