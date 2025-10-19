@@ -376,9 +376,15 @@ export default function Home() {
                 <p className="text-sm text-gray-600 mb-4">{resource.description}</p>
                 <div className="flex items-center justify-between pt-4 border-t">
                   <span className="text-xs text-gray-500">{resource.size}</span>
-                  <button className="text-dominion-blue font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
-                    Download <Download className="w-4 h-4" />
-                  </button>
+                  <a
+                      href={resource.downloadLink} // uses the link from your data file
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-dominion-blue font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all"
+                    >
+                      Download <Download className="w-4 h-4" />
+                    </a>
+
                 </div>
               </div>
             ))}
