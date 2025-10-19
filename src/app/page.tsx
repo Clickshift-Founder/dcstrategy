@@ -9,6 +9,11 @@ import {
 import { campaignInfo, areaCouncils, statistics, busPickupPoints, transportationStrategy } from '../data/campaignData'
 import { amacPhases, suburbanDistricts } from '../data/phasesData'
 import { downloadableResources, prayerPoints, wisdomFromStrategy, scriptureFoundations } from '../data/resourcesData'
+import LiveMetricsDashboard from '../components/LiveMetricsDashboard'
+import FortyOneDayTracker from '../components/FortyOneDayTracker'
+import InteractiveAbujaMap from '../components/InteractiveAbujaMap'
+import MasterStrategyNavigator from '../components/MasterStrategyNavigator'
+import CampaignProgressCharts from '../components/CampaignProgressCharts'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -117,22 +122,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Statistics Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-center mb-4">Campaign at a Glance</h2>
-          <div className="section-divider"></div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
-            {statistics.nightOfGlory.map((stat, index) => (
-              <div key={index} className="gradient-border p-6 text-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl font-bold text-gradient mb-2">{stat.value.toLocaleString()}{stat.suffix || ''}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 🔥 NEW: Live Metrics Dashboard */}
+      <LiveMetricsDashboard />
+
+           {/* 🔥 NEW: 41-Day Tracker - MOST IMPORTANT! */}
+      <FortyOneDayTracker />
 
       {/* Night of Glory Section */}
       <section id="night-of-glory" className="section-padding">
@@ -187,6 +182,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          {/* 🔥 NEW: Campaign Progress Charts */}
+      <CampaignProgressCharts />
 
           {/* Transportation */}
           <div className="bg-blue-50 rounded-2xl p-8">
@@ -267,6 +265,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+       {/* 🔥 NEW: Interactive Abuja Map */}
+      <InteractiveAbujaMap />
 
       {/* Abuja Strategy Section */}
       <section id="abuja-strategy" className="section-padding bg-gray-50">
@@ -353,6 +354,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+       {/* 🔥 NEW: Master Strategy Navigator */}
+      <MasterStrategyNavigator />
 
       {/* Resources Section */}
       <section id="resources" className="section-padding">
