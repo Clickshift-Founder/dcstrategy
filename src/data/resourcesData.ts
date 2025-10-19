@@ -20,7 +20,7 @@ export const downloadableResources = [
       "Prayer and spiritual warfare",
       "Consolidation and discipleship"
     ],
-    downloadLink: "" // To be filled by user
+    downloadLink: "https://drive.google.com/file/d/1FJkbfQmzWChoKbr8SsVy8FbvzGHnINOU/view?usp=sharing" // To be filled by user
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ export const downloadableResources = [
       "Event day timeline",
       "Emergency contacts"
     ],
-    downloadLink: ""
+    downloadLink: "https://drive.google.com/file/d/1MaV9JE-1YVjiMjl0AWGVqF5ZtAOfwNk5/view?usp=sharing"
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ export const downloadableResources = [
       "30 bus pickup points",
       "Contact templates"
     ],
-    downloadLink: ""
+    downloadLink: "https://drive.google.com/file/d/1dEw3s7cOs-TWQH4XEt2Sz6gdydwrV3Pl/view?usp=sharing"
   },
   {
     id: 4,
@@ -77,7 +77,7 @@ export const downloadableResources = [
       "Budget & finance tracker",
       "Prayer points reference"
     ],
-    downloadLink: ""
+    downloadLink: "https://docs.google.com/spreadsheets/d/1JV7Das3kANVnytxt4zR4EdUAbHZ8F8KQ/edit?usp=sharing&ouid=110712603550535723810&rtpof=true&sd=true"
   },
   {
     id: 5,
@@ -95,7 +95,7 @@ export const downloadableResources = [
       "Troubleshooting tips",
       "Faith declarations"
     ],
-    downloadLink: ""
+    downloadLink: "https://drive.google.com/file/d/1Eu0hFNvIofd7zGKJl97uZd2lDX5csM5Q/view?usp=sharing"
   }
 ]
 
