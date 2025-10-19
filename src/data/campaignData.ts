@@ -54,15 +54,15 @@ export const campaignInfo = {
     },
     ministersLineup: [
       "Dr. David Ogbueli",
-      "Apst. Ikechukwu Nina Joel",
-      "Dr. Charles Muteti",
-      "Pst. Ikenna Ogbudei",
-      "Evang. Odinaka Egbosimba",
-      "Emeka Sowers",
+      "Apst. Ikechukwu Nnajiofor" ,
+      "Dr. Charles Ndifon",
+      "Evang. Daniel Scott",
+      "Evang. Andres Bisonni",
+      "Ebuka Songs",
       "Theophilus Sunday",
-      "Nat Daniel Bassey",
-      "Anu Gibi",
-      "Anthony Rawa"
+      "Nathaniel Bassey",
+      "Min. GUC",
+      "Anthony Kani"
     ]
   },
   hundredMillion: {
